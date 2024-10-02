@@ -1,5 +1,6 @@
 class Car {
     constructor(x , y) {
+      console.log(x + y);
        console.log("x is position: " + x);
        console.log("y is position: " + y);
        console.log("This is a costructor");
