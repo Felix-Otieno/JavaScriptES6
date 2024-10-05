@@ -1,0 +1,64 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        #redBox {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="redBox"></div>
+    <script type="text/javascript">
+        var redBox = document.getElementById("redBox");
+        var animation;
+        function epicMovement() {
+            redBox.style.left = parseInt(redBox.style.left + 5 + 'px');
+            animation = setTimeout(epicMovement, 20);
+        }
+        epicMovement()
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        #redBox {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            left: 0px; /* Initialize the left position */
+        }
+    </style>
+</head>
+<body>
+    <div id="redBox"></div>
+    <script type="text/javascript">
+        var redBox = document.getElementById("redBox");
+        var animation;
+
+        function epicMovement() {
+            // Parse the current left position as an integer and increment it
+            var currentLeft = parseInt(redBox.style.left, 10);
+            redBox.style.left = (currentLeft + 5) + 'px'; // Update the left position
+            animation = setTimeout(epicMovement, 20); // Continue the animation
+        }
+
+        epicMovement();
+    </script>
+</body>
+</html>

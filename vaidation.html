@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script text="text/javascript">
+        function validationFunc() {
+            console.log("It is working");
+            let value1 = document.epicForm.username.value;
+            console.log(value1);
+            if (value1 === "") {
+                console.log("It is empty");
+            } else if (value1.length < 10) {
+                        console.log("Length should be atleast 10 ");
+            } else {
+                console.log("Fantastic");
+            }
+            
+        }
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+   <form name="epicForm">
+    <input type="text" name="username">
+    <button type="button" onclick="validationFunc()">Click Me</button>
+
+   </form> 
+</body>
+</html>
